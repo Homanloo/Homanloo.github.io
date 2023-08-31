@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+
+
+
+:root{
+    
+    --bg-color: #778DA9;
+    --body-color1: #0D1B2A;
+    --body-color2: #1B263B;
+    --body-color3: #27394e;
+    --text-color1: #E0E1DD;
+    --text-color2: #a2d2ff;
+
+    --name-size: 56px;
+    --section-title-size: 30px;
+    --title-size: 24px;
+    --smaller-title-size: 20px;
+
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.container{
+    margin: 1rem;
+    /* padding-top: 1rem; */
+    border-radius: 0.3rem;
+}
+
+.main{
+    max-width: 1280px;
+    width: calc(100% - 3rem);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: var(--body-color1);
+    text-align: center;
+    /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
+    border-radius: 0.30rem;
+}
+
+.section_title{
+    margin: 1rem;
+    font-style: bold;
+    color: var(--text-color2);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-color2);
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.header_main{
+    background-color:var(--body-color2);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.header_main_text{
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    flex-basis: 60%;
+}
+
+.header_main_text_name{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header_main_img{
+    padding-top: 1rem;
+}
+
+.name{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Lobster Two', cursive;
+    margin-bottom: 2rem;
+    font-size: var(--name-size);
+    color: var(--text-color1);
+}
+
+#alter_text{
+    color: var(--text-color1);
+    font-family: 'Lobster Two', cursive;
+    font-size: var(--title-size);
+}
+
+#spin::before{
+    content: "All Time Learner!";
+    animation: alter infinite 10s ease-in-out;
+    color: var(--text-color2);
+}
+
+@keyframes alter{
+    25% {content: "Chemical Engineering Student!";}
+    50% {content: "Programmer!";}
+    75% {content: "Science Lover!";}
+}
+
+.header_main_text_contact{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    align-items: center;
+    flex-basis: 20%;
+    flex-wrap: wrap;
+}
+
+.contact_links{
+    margin: 8px;
+    text-decoration: none;
+    color: var(--text-color1);
+    transition: all 0.15s ease-in-out;
+}
+
+.contact_links:hover{
+    color:var(--text-color2);
+}
+
+.CV{
+    text-decoration: none;
+    color: var(--text-color1);
+    border: 1px solid var(--text-color2);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-top: 8px;
+    background-color: var(--body-color1);
+    transition: all 0.1s ease-in-out;
+}
+
+.CV:hover{
+    cursor: pointer;
+    background-color: var(--body-color3);
+    color: var(--text-color2);
+}
+
+.header_main_img{
+    background-color: var(--body-color2);
+    order: 2;
+    flex-basis: 40%;
+}
+
+.my_img{
+    width: 250px;
+    border-radius: 50%;
+}
+
+.blob{
+    width: 320px;
+}
+
+.header_nav{
+    background-color: var(--body-color1);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_list{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.nav_link{
+    text-decoration: none;
+    color: var(--text-color1);
+    padding: 8px;
+    border: 0.2px solid var(--text-color2);
+    border-radius: 0.25rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav_link:hover{
+    background-color: var(--body-color3);
+    color: var(--text-color2);
+}
+
+.nav_item{
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.about_skills{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 59%;
+    background-color: var(--body-color2);
+    border-radius: 0.3rem;
+    color: var(--text-color1);
+}
+
+.about_text{
+    padding: 2rem;
+    padding-top: 0;
+    border-bottom: 1px solid var(--text-color1);
+
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 39%;
+    background-color: var(--body-color2);
+    border-radius: 0.3rem;
+    color: var(--text-color1);
+}
+
+.skill_category{
+    color: var(--text-color2);
+}
+
+.skills h1{
+    margin-bottom: 1rem;
+}
+
+.skills h3{
+    align-self: flex-start;
+    margin-left: 2rem;
+}
+
+.skills ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.skills li{
+    margin: 0.5rem;
+}
+
+.language_edu{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.language{
+    flex-basis: 50%;
+    padding: 1rem;
+    border-right: 1px solid var(--text-color1);
+}
+
+.language_info p{
+    padding: 0;
+    align-self: center;
+}
+
+.language_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.language ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+.language h1{
+    margin-top: 0;
+}
+
+.language li{
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.language_score h3{
+    margin-top: 1rem;
+}
+
+.language_icon{
+    margin-right: 5px;
+}
+
+.education p{
+    padding: 0;
+}
+
+.education h4{
+    margin-bottom: 1rem;
+}
+
+.education h1{
+    margin-top: 0;
+}
+
+.education{
+    flex-basis: 50%;
+    padding: 1rem;
+}
+
+.courses{
+    display: flex;
+    flex-direction: column;
+}
+
+.course_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.course_item{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--body-color2);
+    flex-basis: 49%;
+    color: var(--text-color1);
+    justify-content: start;
+}
+
+.course_item:hover{
+    cursor: default;
+    background-color: var(--body-color3);
+}
+
+.course_item ul{
+    display: flex;
+}
+
+.course_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.course_name{
+    color: var(--text-color2);
+    font-size: var(--title-size);
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+.course_certificate{
+    align-self: end;
+    border: 1px var(--text-color2) solid;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color1);
+    align-self: start;
+    background-color: var(--body-color1);
+}
+
+
+.course_certificate:hover{
+    color: var(--text-color2);
+}
+
+.course_time{
+    align-self: start;
+}
+
+.courses h3{
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.course_skills_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.course_skills_list_item{
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0.3rem;
+}
+
+.projects{
+    padding: 1rem;
+}
+
+.project_sub{
+    text-align: start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-color2);
+}
+
+.project_item{
+    background-color: var(--body-color3);
+    color: var(--text-color1);
+    width: 100%;
+    font-size: var(--smaller-title-size);
+    padding: 0.8rem;
+    font-family: 'Arsenal', sans-serif;
+    text-align: start;
+    border: 1px var(--text-color2) solid;
+    border-radius: 0.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.active, .project_item:hover{
+    background-color: var(--body-color1);
+    color: var(--text-color2);
+    cursor: pointer;
+}
+
+.project_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding-bottom: 1.5rem;
+    transition: all 0.2s ease;
+    background-color: var(--body-color3);
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+
+.project_content_text{
+    color: var(--text-color1);
+    padding: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 1rem;
+    text-align: start;
+}
+
+.project_content_image{
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+    margin: 1rem;
+    margin-top: 0;
+    padding: 1rem;
+    border: 1px solid var(--body-color2);
+    border-radius: 0.3rem;
+}
+
+.project_image{
+    max-width: 70%;
+}
+
+.project_content_empty{
+    color: var(--text-color1);
+    text-align: center;
+    height: 0;
+}
+
+.project_content_file a{
+    border: 1px solid var(--text-color2);
+    border-radius: 0.25rem;
+    text-decoration: none;
+    color: var(--text-color1);
+    padding: 0.5rem;
+    text-align: start;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.project_content_file{
+    margin-top: 1.5rem;
+}
+
+.project_file:hover{
+    background-color: var(--body-color3);
+    color: var(--text-color2);
+}
+
+
+
+@media screen and (max-width: 840px) {
+    
+    .main{
+        width: 100%;
+        margin: 0;
+        border-radius: 0%;
+    }
+    .header_main{
+        flex-direction: column;
+    }
+    .header_main_img{
+        order: 1;
+    }
+    .my_img{
+        width: 240px;
+    }
+    .blob{
+        width: 280px;
+    }
+    .header_main_text{
+        order: 2;
+    }
+
+    .about_skills{
+        flex-direction: column;
+    }
+    .language_edu{
+        flex-direction: column;
+    }
+    .language{
+        border-right: none;
+        border-bottom: 1px var(--text-color1) solid;
+    }
+    .language_info{
+        justify-content: space-around;
+    }
+    .education{
+        border-bottom: 1px var(--text-color1) solid;
+    }
+
+    .skills{
+        margin-bottom: 1rem;
+    }
+
+    .course_row{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .course_item{
+        margin-bottom: 1rem;
+    }
+}
