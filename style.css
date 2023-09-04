@@ -559,4 +559,12 @@ body{
     .course_item{
         margin-bottom: 1rem;
     }
+
+    .project_image{
+        max-width: 100%;
+    }
+
+    .project_content_empty{
+        height: fit-content;
+    }
 }
